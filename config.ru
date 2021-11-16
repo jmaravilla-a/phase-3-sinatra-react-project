@@ -13,4 +13,5 @@ use Rack::JSONBodyParser
 
 # Our application
 use RoutineController
+use ExerciseController
 run ApplicationController

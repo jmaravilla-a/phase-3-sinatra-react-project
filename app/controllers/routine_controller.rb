@@ -11,6 +11,30 @@ class RoutineController < ApplicationController
       routine = Routine.find_by_id(params[:id])
       routine.to_json
     end
+
+    post "/routines" do
+      routine = Routine.create(
+        routine_name: params[:routine_name],
+        muscle_group: params[:muscle_group],
+        personal_trainer_id: params[:personal_trainer_id]
+      )
+      routine.to_json
+    end
   
+    patch "/routines/:id" do
+      routine = Routine.find(params[:id])
+      routine.update(
+        routine_name: params[:routine_name],
+        muscle_group: params[:muscle_group],
+        personal_trainer_id: params[:personal_trainer_id]
+      )
+      routine.to_json
+    end
+
+    delete "/routines/:id" do
+      routine = Routine.find(params[:id])
+      routine.destroy
+    end
+
   end
   
