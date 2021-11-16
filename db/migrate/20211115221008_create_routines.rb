@@ -3,7 +3,6 @@ class CreateRoutines < ActiveRecord::Migration[6.1]
     create_table :routines do |t|
       t.string :routine_name
       t.string :muscle_group
-      t.string :instructions
       t.integer :personal_trainer_id
     end
   end

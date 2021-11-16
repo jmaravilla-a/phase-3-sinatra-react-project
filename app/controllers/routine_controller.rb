@@ -3,7 +3,13 @@ class RoutineController < ApplicationController
     
     # Add your routes here
     get "/routines" do
-      "This will be our routine Page"
+      routines = Routine.all
+      routines.to_json
+    end
+
+    get "/routines/:id" do
+      routine = Routine.find_by_id(params[:id])
+      routine.to_json
     end
   
   end
