@@ -14,9 +14,24 @@ PersonalTrainer.create(
 
 # Creating Routines
 Routine.create(
-    routine_name: "Best Leg Day Routine", 
+    routine_name: "BEST LEG DAY", 
     muscle_group: "Lower Body: Glutes, Quadriceps, Hamstrings, and Calves", 
-    personal_trainer_id: PersonalTrainer.first.id
+    personal_trainer_id: PersonalTrainer.first.id,
+    routine_image: "https://darebee.com/images/workouts/muscles/leg-day-workout.jpg"
+)
+
+Routine.create(
+    routine_name: "KEYBOARD WARRIOR", 
+    muscle_group: "Upper Body: thenar, hypothenar, interossei and the lumbrical muscles", 
+    personal_trainer_id: PersonalTrainer.first.id,
+    routine_image:"https://darebee.com/images/workouts/muscles/keyboard-warrior-workout.jpg"
+)
+
+Routine.create(
+    routine_name: "SQUID GAMER", 
+    muscle_group: "Full Body: chest, back, shoulders, core, legs and glutes", 
+    personal_trainer_id: PersonalTrainer.first.id,
+    routine_image: "https://darebee.com/images/workouts/muscles/dragon-lord-workout.jpg"
 )
 
 # Creating Exercises

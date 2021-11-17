@@ -16,7 +16,8 @@ class RoutineController < ApplicationController
       routine = Routine.create(
         routine_name: params[:routine_name],
         muscle_group: params[:muscle_group],
-        personal_trainer_id: params[:personal_trainer_id]
+        personal_trainer_id: params[:personal_trainer_id],
+        routine_image: params[:routine_image],
       )
       routine.to_json
     end
@@ -26,7 +27,8 @@ class RoutineController < ApplicationController
       routine.update(
         routine_name: params[:routine_name],
         muscle_group: params[:muscle_group],
-        personal_trainer_id: params[:personal_trainer_id]
+        personal_trainer_id: params[:personal_trainer_id],
+        routine_image: params[:routine_image],
       )
       routine.to_json
     end
