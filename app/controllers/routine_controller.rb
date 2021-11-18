@@ -3,6 +3,7 @@ class RoutineController < ApplicationController
     
     # Add your routes here
     get "/routines" do
+    # binding.pry
       routines = Routine.all
       routines.to_json
     end
@@ -36,6 +37,7 @@ class RoutineController < ApplicationController
     delete "/routines/:id" do
       routine = Routine.find(params[:id])
       routine.destroy
+      Routine.all.to_json
     end
 
   end
