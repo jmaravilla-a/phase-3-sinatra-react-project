@@ -3,9 +3,8 @@ class RoutineController < ApplicationController
     
     # Add your routes here
     get "/routines" do
-    # binding.pry
       routines = Routine.all
-      routines.to_json
+      routines.to_json include: :exercises
     end
 
     get "/routines/:id" do
@@ -39,6 +38,5 @@ class RoutineController < ApplicationController
       routine.destroy
       Routine.all.to_json
     end
-
   end
   
