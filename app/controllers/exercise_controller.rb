@@ -2,8 +2,8 @@ class ExerciseController < ApplicationController
     
     # Add your routes here
     get "/exercises" do
-        exercise = Exercise.all
-        exercise.to_json
+        exercises = Exercise.all
+        exercises.to_json
     end
 
     get "/exercises/:id" do
@@ -35,6 +35,7 @@ class ExerciseController < ApplicationController
     delete "/exercises/:id" do
         exercise = Exercise.find(params[:id])
         exercise.destroy
+        Exercise.all.to_json
     end
   
   end
